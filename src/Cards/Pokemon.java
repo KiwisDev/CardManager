@@ -4,6 +4,11 @@ public class Pokemon extends Card{
     private String element;
     private int force;
 
+    public Pokemon(String element, int force) {
+        this.element = element;
+        this.force = force;
+    }
+
     public String getElement() {
         return element;
     }

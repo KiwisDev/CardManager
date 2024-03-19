@@ -1,8 +1,8 @@
 package Cards;
 
-public class Card {
+public abstract class Card {
     private String name;
-    private String type;
+    private CardType type;
 
 
     public String getName() {
@@ -13,11 +13,11 @@ public class Card {
         this.name = name;
     }
 
-    public String getType() {
+    public CardType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(CardType type) {
         this.type = type;
     }
 }
