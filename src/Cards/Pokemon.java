@@ -4,7 +4,8 @@ public class Pokemon extends Card{
     private String element;
     private int force;
 
-    public Pokemon(String element, int force) {
+    public Pokemon(String name,String element, int force) {
+        super(name,CardType.POKEMON);
         this.element = element;
         this.force = force;
     }

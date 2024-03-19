@@ -5,6 +5,13 @@ public class Magic extends Card{
     private int rang;
     private String couleur;
 
+    public Magic(String name, CardType type, int force, int rang, String couleur) {
+        super(name, type);
+        this.force = force;
+        this.rang = rang;
+        this.couleur = couleur;
+    }
+
 
     public int getForce() {
         return force;
