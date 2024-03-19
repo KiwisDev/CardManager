@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        int choice = 0;
-        Scanner scanner = new Scanner(System.in);
+        int choice;
 
         do {
             System.out.println("** --- CardManager --- **\n");
@@ -34,7 +35,37 @@ public class Main {
     }
 
     public static void addCard() {
-        System.out.println("Add card");
+        System.out.println("\n** --- Add card --- ***\n");
+        String type;
+
+        do {
+            System.out.print("Type of card to add? (pokemon/magic): ");
+            type = scanner.next();
+            type = type.toLowerCase();
+
+            if(type.equals("pokemon") || type.equals("magic")) {
+                break;
+            }
+            else {
+                System.out.println("Invalid type! Please enter again.");
+            }
+        } while(true);
+
+        System.out.print("\nName: ");
+        String name = scanner.next();
+        System.out.print("Force: ");
+        int force = scanner.nextInt();
+
+        if(type.equals("pokemon")) {
+            String element = scanner.nextLine();
+
+            //TODO: Add pokemon card
+        }
+        else {
+            String rank = scanner.nextLine();
+
+            //TODO: Add magic card
+        }
     }
 
     public static void editCard() {
