@@ -18,5 +18,11 @@ public class Deck {
         }
     }
 
-
+    public void getMagic(){
+        for(int i=0;i< cardsList.size();i++){
+            if(cardsList.get(i).getType()== CardType.MAGIC){
+                System.out.println("Le nom est : "+cardsList.get(i).getName());
+            }
+        }
+    }
 }
