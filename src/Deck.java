@@ -7,13 +7,13 @@ public class Deck {
     private ArrayList<Card> cardsList= new ArrayList<Card>();
 
     public void getAll(){
-        cardsList.forEach((n)->System.out.println("Le nom est :"+n.getName()));
+        cardsList.forEach((n)->System.out.println("The name is: "+n.getName()));
     }
 
     public void getPokemon(){
         for(int i=0;i< cardsList.size();i++){
             if(cardsList.get(i).getType()== CardType.POKEMON){
-                System.out.println("Le nom est : "+cardsList.get(i).getName());
+                System.out.println("The name is:  "+cardsList.get(i).getName());
             }
         }
     }
@@ -21,7 +21,7 @@ public class Deck {
     public void getMagic(){
         for(int i=0;i< cardsList.size();i++){
             if(cardsList.get(i).getType()== CardType.MAGIC){
-                System.out.println("Le nom est : "+cardsList.get(i).getName());
+                System.out.println("The name is: "+cardsList.get(i).getName());
             }
         }
     }

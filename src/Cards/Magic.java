@@ -1,39 +1,39 @@
 package Cards;
 
 public class Magic extends Card{
-    private int force;
-    private int rang;
-    private String couleur;
+    private int strength;
+    private int rank;
+    private String color;
 
-    public Magic(String name, CardType type, int force, int rang, String couleur) {
-        super(name, type);
-        this.force = force;
-        this.rang = rang;
-        this.couleur = couleur;
+    public Magic(String name, int strength, int rank, String color) {
+        super(name, CardType.MAGIC);
+        this.strength = strength;
+        this.rank = rank;
+        this.color = color;
     }
 
 
-    public int getForce() {
-        return force;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setForce(int force) {
-        this.force = force;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
 
-    public int getRang() {
-        return rang;
+    public int getRank() {
+        return rank;
     }
 
-    public void setRang(int rang) {
-        this.rang = rang;
+    public void setRank(int rank) {
+        this.rank = rank;
     }
 
-    public String getCouleur() {
-        return couleur;
+    public String getColor() {
+        return color;
     }
 
-    public void setCouleur(String couleur) {
-        this.couleur = couleur;
+    public void setColor(String color) {
+        this.color = color;
     }
 }

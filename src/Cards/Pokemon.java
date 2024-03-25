@@ -2,12 +2,12 @@ package Cards;
 
 public class Pokemon extends Card{
     private String element;
-    private int force;
+    private int strength;
 
-    public Pokemon(String name,String element, int force) {
+    public Pokemon(String name,String element, int strength) {
         super(name,CardType.POKEMON);
         this.element = element;
-        this.force = force;
+        this.strength = strength;
     }
 
     public String getElement() {
@@ -18,11 +18,11 @@ public class Pokemon extends Card{
         this.element = element;
     }
 
-    public int getForce() {
-        return force;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setForce(int force) {
-        this.force = force;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
 }
