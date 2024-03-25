@@ -96,29 +96,29 @@ public class Main {
 
         System.out.print("New name: ");
         String newName = scanner.next();
-        if(!newName.isEmpty()) card.setName(newName);
+        card.setName(newName);
 
         if(card.getType() == CardType.POKEMON) {
             Pokemon pokemon = (Pokemon) card;
 
             System.out.print("New strength: ");
             int newStrength = scanner.nextInt();
-            if(newStrength != 0) pokemon.setStrength(newStrength);
+            pokemon.setStrength(newStrength);
 
             System.out.print("New element: ");
             String newElement = scanner.next();
-            if(!newElement.isEmpty()) pokemon.setElement(newElement);
+            pokemon.setElement(newElement);
         }
         else {
             Magic magic = (Magic) card;
 
             System.out.print("New rank: ");
             int newRank = scanner.nextInt();
-            if(newRank != 0) magic.setRank(newRank);
+            magic.setRank(newRank);
 
             System.out.print("New color: ");
             String newColor = scanner.next();
-            if(!newColor.isEmpty()) magic.setColor(newColor);
+            magic.setColor(newColor);
         }
     }
 
