@@ -29,4 +29,21 @@ public class Deck {
     public void addCard(Card card){
         cardsList.add(card);
     }
+    public Card getCard(String name){
+        for (Card card : cardsList) {
+            if (card.getName().equals(name)) {
+                return card;
+            }
+        }
+        return null;
+    }
+    public void deleteCard(String name){
+        for(int i=0;i< cardsList.size();i++){
+            if(cardsList.get(i).getName().equals(name)){
+                cardsList.remove(i);
+                System.out.println("The card "+ name+" has been deleted.");
+                return;
+            }
+        }
+    }
 }
