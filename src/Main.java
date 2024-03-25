@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 import Cards.Card;
 import Cards.CardType;
 import Cards.Magic;
@@ -7,6 +6,8 @@ import Cards.Pokemon;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
+
+    static Deck deck = new Deck();
 
     public static void main(String[] args) {
         int choice;
@@ -62,14 +63,17 @@ public class Main {
         int force = scanner.nextInt();
 
         if(type.equals("pokemon")) {
-            String element = scanner.nextLine();
+            String element = scanner.next();
+            Pokemon pokemon = new Pokemon(name, element, force);
 
-            //TODO: Add pokemon card
+            deck.addCard(pokemon);
         }
         else {
-            String rank = scanner.nextLine();
+            int rank = scanner.nextInt();
+            String color = scanner.next();
+            Magic magic = new Magic(name, force, rank, color);
 
-            //TODO: Add magic card
+            deck.addCard(magic);
         }
     }
 
