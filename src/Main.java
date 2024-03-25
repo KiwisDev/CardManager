@@ -63,13 +63,16 @@ public class Main {
         int force = scanner.nextInt();
 
         if(type.equals("pokemon")) {
+            System.out.print("Element: ");
             String element = scanner.next();
             Pokemon pokemon = new Pokemon(name, element, force);
 
             deck.addCard(pokemon);
         }
         else {
+            System.out.print("Rank: ");
             int rank = scanner.nextInt();
+            System.out.print("Color: ");
             String color = scanner.next();
             Magic magic = new Magic(name, force, rank, color);
 
