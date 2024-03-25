@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import Cards.Card;
-import Cards.CardType;
 import Cards.Magic;
 import Cards.Pokemon;
 
@@ -59,13 +57,13 @@ public class Main {
 
         System.out.print("\nName: ");
         String name = scanner.next();
-        System.out.print("Force: ");
-        int force = scanner.nextInt();
+        System.out.print("Strength: ");
+        int strength = scanner.nextInt();
 
         if(type.equals("pokemon")) {
             System.out.print("Element: ");
             String element = scanner.next();
-            Pokemon pokemon = new Pokemon(name, element, force);
+            Pokemon pokemon = new Pokemon(name, element, strength);
 
             deck.addCard(pokemon);
         }
@@ -74,29 +72,45 @@ public class Main {
             int rank = scanner.nextInt();
             System.out.print("Color: ");
             String color = scanner.next();
-            Magic magic = new Magic(name, force, rank, color);
+            Magic magic = new Magic(name, strength, rank, color);
 
             deck.addCard(magic);
         }
     }
 
     public static void editCard() {
-        System.out.println("Edit card");
+        System.out.println("\n** --- Edit card --- ***\n");
+
+        System.out.print("Name of the card to edit : ");
+        String name = scanner.next();
+
+        // TODO : Edit card
     }
 
     public static void deleteCard() {
-        System.out.println("Delete card");
+        System.out.println("\n** --- Delete card --- ***\n");
+
+        System.out.print("Name of the card to delete : ");
+        String name = scanner.next();
+
+        // TODO : Delete card
     }
 
     public static void showAllCards() {
-        System.out.println("Show all cards");
+        System.out.println("\n** --- Cards list --- ***\n");
+
+        deck.getAll();
     }
 
     public static void showAllPokemonsCards() {
-        System.out.println("Show all pokemons cards");
+        System.out.println("\n** --- Pokemon cards list --- ***\n");
+
+        deck.getPokemon();
     }
 
     public static void showAllMagicsCards() {
-        System.out.println("Show all magics cards");
+        System.out.println("\n** --- Magic cards list --- ***\n");
+
+        deck.getMagic();
     }
 }
