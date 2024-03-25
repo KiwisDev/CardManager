@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+import Cards.Card;
+import Cards.CardType;
+import Cards.Magic;
+import Cards.Pokemon;
+
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
