@@ -128,7 +128,7 @@ public class Main {
         System.out.print("Name of the card to delete : ");
         String name = scanner.next();
 
-        // TODO : Delete card
+        deck.deleteCard(name);
     }
 
     public static void showAllCards() {
