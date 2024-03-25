@@ -37,6 +37,7 @@ public class Deck {
         }
         return null;
     }
+
     public void deleteCard(String name){
         for(int i=0;i< cardsList.size();i++){
             if(cardsList.get(i).getName().equals(name)){

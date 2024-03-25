@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import Cards.Card;
+import Cards.CardType;
 import Cards.Magic;
 import Cards.Pokemon;
 
@@ -84,7 +87,39 @@ public class Main {
         System.out.print("Name of the card to edit : ");
         String name = scanner.next();
 
-        // TODO : Edit card
+        Card card = deck.getCard(name);
+
+        if(card == null) {
+            System.out.println("Card not found!");
+            return;
+        }
+
+        System.out.print("New name: ");
+        String newName = scanner.next();
+        if(!newName.isEmpty()) card.setName(newName);
+
+        if(card.getType() == CardType.POKEMON) {
+            Pokemon pokemon = (Pokemon) card;
+
+            System.out.print("New strength: ");
+            int newStrength = scanner.nextInt();
+            if(newStrength != 0) pokemon.setStrength(newStrength);
+
+            System.out.print("New element: ");
+            String newElement = scanner.next();
+            if(!newElement.isEmpty()) pokemon.setElement(newElement);
+        }
+        else {
+            Magic magic = (Magic) card;
+
+            System.out.print("New rank: ");
+            int newRank = scanner.nextInt();
+            if(newRank != 0) magic.setRank(newRank);
+
+            System.out.print("New color: ");
+            String newColor = scanner.next();
+            if(!newColor.isEmpty()) magic.setColor(newColor);
+        }
     }
 
     public static void deleteCard() {
