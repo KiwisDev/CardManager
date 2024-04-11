@@ -21,7 +21,8 @@ public class Main {
             System.out.println("4. Show all cards");
             System.out.println("5. Show all pokemons cards");
             System.out.println("6. Show all magics cards");
-            System.out.println("7. Exit\n");
+            System.out.println("7. Sort cards");
+            System.out.println("8. Exit\n");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -33,10 +34,11 @@ public class Main {
                 case 4 -> showAllCards();
                 case 5 -> showAllPokemonsCards();
                 case 6 -> showAllMagicsCards();
-                case 7 -> System.out.println("Goodbye!");
+                case 7 -> deck.sortCard();
+                case 8 -> System.out.println("Goodbye!");
                 default -> System.out.println("Invalid choice!");
             }
-        } while (choice != 7);
+        } while (choice != 8);
 
         scanner.close();
     }
